@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador de Sistemas Fotovoltaicos</title>
+</head>
+<body>
+<h1>Simulador de Sistemas Fotovoltaicos</h1>
+<form class="grid" action="/result" method="POST">
+    <div><label for="temperatura">Temperatura: </label> <input type="number"name="temperatura" id="temperatura" min="0"></div>
+    <div><label for="irradiancia">Irradiancia: </label> <input type="number"name="irradiancia" id="irradiancia" min="0"></div>
+    <center><input type="Submit" class="file_sumbit"></center>
+</form>
+{% if ans %}
+<h3> Prediccion de potencia: {{ans}}</h3>
+{% endif %}
+{% if flag %}
+<h3> Faltan datos por ingresar</h3>
+{% endif %}
+</body>
+</html>
+
